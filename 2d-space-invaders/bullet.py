@@ -10,7 +10,7 @@ class Bullet(Sprite):
         self.screen = ai_game.screen
         self.settings = ai_game.settings
         #self.color = self.settings.bullet_color
-        self.image = pygame.image.load('2d-space-invaders/cat.png')
+        self.image = pygame.image.load('2d-space-invaders/images/cat.png')
         self.image = pygame.transform.scale(self.image, (90, 120))
         self.rect = self.image.get_rect()
         self.cap = 12
