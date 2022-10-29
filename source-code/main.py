@@ -15,7 +15,7 @@ class AlienInvasion:
         pygame.init()
         self.settings = Settings()
         self.dim = [pygame.display.Info().current_w, pygame.display.Info().current_h]
-        self.screen = pygame.display.set_mode(self.dim, pygame.RESIZABLE)
+        self.screen = pygame.display.set_mode(self.dim, pygame.FULLSCREEN)
         
         self.textfont = pygame.font.SysFont("chalkboard", 30)
         self.textfont1 = pygame.font.SysFont("futura", 50)
@@ -143,7 +143,7 @@ class AlienInvasion:
         
         ship_height = self.ship.rect.height
         available_space_y = (self.settings.screen_height - (3*alien_height))
-        number_rows = available_space_y // (2*alien_height)
+        number_rows = available_space_y // (2*alien_height) - 1
 
         for row_number in range (number_rows):
             for alien_number in range (number_aliens_x):
