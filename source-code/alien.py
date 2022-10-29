@@ -7,7 +7,7 @@ class Alien(Sprite):
         self.screen = ai_game.screen
         self.settings = ai_game.settings
         # Load the alien image and set its rect attribute.
-        self.image = pygame.image.load('2d-space-invaders/images/alienship.png')
+        self.image = pygame.image.load('source-code/images/alienship.png')
         self.image = pygame.transform.scale(self.image, (60, 80))
         self.rect = self.image.get_rect()
         # Start each new alien near the top left of the screen.

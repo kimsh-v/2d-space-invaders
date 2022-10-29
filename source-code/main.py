@@ -21,7 +21,7 @@ class AlienInvasion:
         self.textfont2 = pygame.font.SysFont("futura", 150)
 
 
-        self.bg = pygame.image.load("2d-space-invaders/images/pls.jpg")
+        self.bg = pygame.image.load("source-code/images/pls.jpg")
 
 
         pygame.display.set_caption ("Shawn's Alien Invasion")
