@@ -14,7 +14,7 @@ class AlienInvasion:
         pygame.init()
         self.settings = Settings()
         self.dim = [pygame.display.Info().current_w, pygame.display.Info().current_h]
-        self.screen = pygame.display.set_mode(self.dim, pygame.FULLSCREEN)
+        self.screen = pygame.display.set_mode(self.dim, pygame.RESIZABLE)
         
         self.textfont = pygame.font.SysFont("chalkboard", 30)
         self.textfont1 = pygame.font.SysFont("futura", 50)
@@ -22,6 +22,7 @@ class AlienInvasion:
 
 
         self.bg = pygame.image.load("source-code/images/pls.jpg")
+        self.bg = pygame.transform.scale(self.bg, (pygame.display.Info().current_w, pygame.display.Info().current_h))
 
 
         pygame.display.set_caption ("Shawn's Alien Invasion")
@@ -57,7 +58,6 @@ class AlienInvasion:
         cap = 50
         while True:
             
-            
             self._check_events()
             if self.stats.game_active:
                 self.ship.update()
@@ -69,8 +69,7 @@ class AlienInvasion:
                 self.settings.alien_speed += 4
                 cap += 50
                 self.level += 1
-                
-            
+
             pygame.display.update()
 
     def _check_events(self):
@@ -81,7 +80,7 @@ class AlienInvasion:
                 self._check_keydown_events(event)
             elif event.type == pygame.KEYUP:
                 self._check_keyup_events(event)
-
+           
     def _check_keydown_events(self, event):
         if event.key == pygame.K_RIGHT:
             self.ship.moving_right = True
