@@ -139,7 +139,7 @@ class AlienInvasion:
         aliens = Alien(self)
         alien_width, alien_height = aliens.rect.size
 
-        number_aliens_x = 11
+        number_aliens_x = self.settings.screen_width // (2*alien_width)
         
         ship_height = self.ship.rect.height
         available_space_y = (self.settings.screen_height - (3*alien_height))
