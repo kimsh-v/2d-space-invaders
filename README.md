@@ -3,7 +3,7 @@
 ## Game Preview
 ![](source-code/images/sample-screenshot.png)
 
-## Instructions to Run On VScode
+## Instructions to Run
 
 <p>You can run this on a virtual python environment.</p>
 <br/>
